@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>jQuery Babel-Tadpole Demo page</title>
+        <meta name="description" content="jQuery Babel-Tadpole Demo page">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css">
+        <style>
+            /* style for the demo page */
+            body{
+                font-size: 16px;
+                font-family: Arial, sans-serif;
+            }
+            .wrapper{
+                margin: 0px auto;
+                max-width: 1100px;
+            }
+            .language-selection{
+                float: right;
+            }
+            blockquote{
+                margin-left: 20px;
+                padding-left: 15px;
+                border-left: 5px solid #EEE;
+            }
+            .source{
+                color: #777;
+                font-size: 0.8em;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="wrapper">
+
+            <ul class="language-selection">
+                <li>
+                    <a href="#" data-lang="en">English</a>
+                </li>
+                <li>
+                    <a href="#" data-lang="it">Italiano</a>
+                </li>
+            </ul>
+
+            <h1>
+                <span class="en">jQuery Babel-Tadpole Demo page</span>
+                <span class="it">Pagina dimostrativa per jQuery Babel-Tadpole</span>   
+            </h1>
+
+            <p>
+                <span class="en">Change lagnuage using the list at right and the this text will change</span>
+                <span class="it">Cambia la lingua utilizzando al lista a destra e questo testo cambierà</span>
+            </p>
+
+            <blockquote>
+                <span class="en">The Babel fish is small, yellow, leech-like, and probably the oddest thing in the universe. It feeds on brain wave energy, absorbing all unconscious frequencies and then excreting telepathically a matrix formed from the conscious frequencies and nerve signals picked up from the speech centres of the brain, the practical upshot of which is that if you stick one in your ear, you can instantly understand anything said to you in any form of language</span>
+                <span class="it">Il Babelfish è piccolo, giallo, ricorda una sanguisuga ed è forse la cosa più strana dell'universo. Si ciba dell'energia delle onde cerebrali, assorbendo frequenze inconsce ed espellendo una matrice di frequenze consce verso i centri cerebrali del linguaggio. La conseguenza pratica è che se ve ne ficcate uno nell'orecchio, comprenderete istantaneamente qualunque cosa, in qualunque lingua.</span>
+                <p class="source">
+                    <span class="en">Douglas Adams - The Hitchhiker's Guide to the Galaxy</span>
+                    <span class="it">Douglas Adams - Guida galattica per gli autostoppisti</span>
+                </p>
+            </blockquote>
+
+        </div>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="lib/jquery-1.10.2.min.js"><\/script>')</script>
+        <script src="src/jquery-babel-tadpole.js"></script>
+
+        <script>
+            $(function() {
+                $().babelTadpole(
+                    {
+                        'defaultLanguage' : 'en',
+                        'aviableLanguages': [ 'en', 'it']
+                    }
+                );
+            });
+        </script>
+    </body>
+</html>

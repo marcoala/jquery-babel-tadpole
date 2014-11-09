@@ -1,0 +1,14 @@
+$languages: en it;
+
+
+@each $language in $languages{
+   span.#{$language}{
+    display: none;
+    transition: display 0s !important;
+  } 
+  body.#{$language} {
+    span.#{$language}{
+      display: inline;
+    } 
+  }
+}
