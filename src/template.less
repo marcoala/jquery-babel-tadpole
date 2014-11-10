@@ -1,0 +1,17 @@
+@languages: en it;
+
+.generateLanguageRule(@list, @index) when ((@index)>0){
+  @language: extract(@list, @index);
+   span.@{language}{
+    display: none;
+    transition: display 0s !important;
+  }
+  body.@{language} {
+    span.@{language}{
+      display: inline;
+    } 
+  }
+  .generateLanguageRule(@list, (@index - 1));
+}
+
+.generateLanguageRule(@languages, length(@languages));
