@@ -96,4 +96,4 @@ Is a reference to the Babel fish from the [The Hitchhiker's Guide to the Galaxy]
 
 ## Support
 
-If you have any problem or want to suggest a new feature open an Issue, if you want to contribute fork, modify it and make a pull request.  
+If you have any problem or want to suggest a new feature open an Issue, if you want to contribute fork, modify it and make a pull request.
